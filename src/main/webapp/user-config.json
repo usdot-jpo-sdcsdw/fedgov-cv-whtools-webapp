@@ -1,0 +1,30 @@
+{
+    "settings": {
+        "UI": {
+            "name": "usdot",
+            "spec": 2.1,
+            "features": [
+                {
+                    "name": "query",
+                    "enabled": true
+                },
+                {
+                    "name": "subscription",
+                    "enabled": true
+                },
+                {
+                    "name": "deposit",
+                    "enabled": true
+                },
+                {
+                    "name": "map",
+                    "enabled": true,
+                    "timers": {
+                        "signals": 2000,
+                        "vehicles": 15000
+                    }
+                }
+            ]
+        }
+    }
+}

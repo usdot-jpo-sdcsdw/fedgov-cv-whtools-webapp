@@ -1,0 +1,13 @@
+[
+{ "type": "Feature", "id": 0, "properties": { "NAME": "Novi", "STATE": "MI", "CITY": "Novi", "ZIP": 48376 }, "geometry": { "type": "Point", "coordinates": [ -83.476, 42.489 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "NAME": "Detroit", "STATE": "MI", "CITY": "Detroit", "ZIP": 48201 }, "geometry": { "type": "Point", "coordinates": [ -83.0457538, 42.331426999999998 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "NAME": "San Fransisco", "STATE": "CA", "CITY": "San Fransisco", "ZIP": 94102 }, "geometry": { "type": "Point", "coordinates": [ -122.419416, 37.774929 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "NAME": "Washington DC", "STATE": "DC", "CITY": "Washington DC", "ZIP": 20001 }, "geometry": { "type": "Point", "coordinates": [ -77.036365799999999, 38.895111800000002 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "NAME": "Leesburg", "STATE": "VA", "CITY": "Leesburg", "ZIP": 20175 }, "geometry": { "type": "Point", "coordinates": [ -77.563602, 39.115662 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "NAME": "San Antonio", "STATE": "TX", "CITY": "San Antonio", "ZIP": 78201 }, "geometry": { "type": "Point", "coordinates": [ -98.493628200000003, 29.424121899999999 ] } }
+]

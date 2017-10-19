@@ -1,0 +1,49 @@
+{
+    "UIs" : [
+        {
+            "name" : "dashboard",
+            "paths": {
+                "js" : "js/dashboard.js",
+                "css": "css/dashboard.css",
+                "img": "img/dashboard.png",
+                "kml": ""
+            },
+            "bounds": {
+                "nwBoundLon": -85,
+                "nwBoundLat": 43,
+                "seBoundLon": -82,
+                "seBoundLat": 41
+            }
+        },
+        {
+            "name" : "usdot",
+            "paths": {
+                "js" : "js/usdot.js",
+                "css": "css/usdot.css",
+                "img": "img/usdot-small.png",
+                "kml": "external/KML/Test Bed RSUs.kml"
+            },
+            "bounds": {
+                "nwBoundLon": -85,
+                "nwBoundLat": 43,
+                "seBoundLon": -82,
+                "seBoundLat": 41
+            }
+        },
+        {
+            "name" : "detroit",
+            "paths": {
+                "js" : "js/detroit.js",
+                "css": "css/detroit.css",
+                "img": "img/CityDetroitlogo3.png",
+                "kml": "external/KML/Test Bed RSUs Detroit.kml"
+            },
+            "bounds": {
+                "nwBoundLon": -83.05934075973,
+                "nwBoundLat": 42.33873012824,
+                "seBoundLon": -83.03073725553,
+                "seBoundLat": 42.32245521050
+            }
+        }
+    ]
+}

@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Test Bed RSUs.kml</name>
+	<Schema parent="Placemark" name="S_test_DD">
+		<SimpleField type="double" name="_83_35371"></SimpleField>
+		<SimpleField type="double" name="_2_39042"></SimpleField>
+	</Schema>
+	<Schema parent="Placemark" name="S_DTE_Intersection_RSEs_Part_1_DD">
+		<SimpleField type="double" name="POINT_X"></SimpleField>
+		<SimpleField type="double" name="POINT_Y"></SimpleField>
+	</Schema>
+	<Schema parent="Placemark" name="S_DTE_Freeway_RSEs_DD">
+		<SimpleField type="double" name="POINT_X"></SimpleField>
+		<SimpleField type="double" name="POINT_Y"></SimpleField>
+	</Schema>
+	<Style id="RSUs">
+    		<IconStyle>
+    		<scale>.5</scale>
+    			<color>50F0FF14</color>
+    			<Icon>
+    				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+    			</Icon>
+    		</IconStyle>
+    </Style>
+	<Style id="s_ylw-pushpin04">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl5000">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_304">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_shaded_dot5">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin040</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_shaded_dot16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin04000">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_A31">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_A700</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_A3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin040">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_shaded_dot10">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_shaded_dot010">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_A700">
+		<IconStyle>
+			<color>ffff0055</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_shaded_dot20">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_shaded_dot1">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.9</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl500">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0400</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl500</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_shaded_dot02">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0400">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_shaded_dot3">
+		<IconStyle>
+			<color>ffff0055</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_302">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0</scale>
+		</LabelStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_shaded_dot">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_W_copy10">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight00">
+		<IconStyle>
+			<color>ff7faaff</color>
+			<scale>1.65455</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl50">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_370">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_304</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_301</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_shaded_dot2">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.30001</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.9</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_shaded_dot30">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_target">
+		<IconStyle>
+			<color>ffff55aa</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_301">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_A3">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_donut1">
+		<IconStyle>
+			<color>ff00aa00</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_3042">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0</scale>
+		</LabelStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin04000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl50</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_shaded_dot010">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl5000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_target1">
+		<IconStyle>
+			<color>ffff55aa</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_donut">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_donut</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_donut1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_shaded_dot4">
+		<IconStyle>
+			<color>ff00ff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_W_copy1001">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_shaded_dot1">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_target2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_target</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_target1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_placemark_circle00">
+		<IconStyle>
+			<color>ff7faaff</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_W_copy100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_W_copy1001</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_W_copy10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_shaded_dot21">
+		<IconStyle>
+			<color>ff00ff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_3701">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_3042</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_302</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_shaded_dot20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot21</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_shaded_dot2">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot200">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl5">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_donut">
+		<IconStyle>
+			<color>ff00aa00</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Folder>
+		<name>RSUs</name>
+		<open>1</open>
+		<Folder>
+			<name>Telegraph Road</name>
+			<Placemark>
+				<name>Telegraph Road: S of 9 Mile - NB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2783259,42.4558085,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 9 Mile</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2784771,42.4574191,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: No of 9 Mile - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2786399,42.4592565,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Garner - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2789848,42.4626903,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: S of 10 Mile - NB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2806037,42.470265,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 10 Mile</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2817354,42.4720011,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: N of 10 Mile - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2823245,42.4730437,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Raleigh Office Center - NB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2831932,42.4744597,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Denso Drive - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2851091,42.4780175,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Civic Center</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.28526960000001,42.4795001,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Swanson - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.28551631448836,42.48261565747117,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 11 Mile Service Dr - NB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2849066,42.4961224,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: NW Service Dr - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2851028,42.4961883,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12 Mile - SB xover</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2852851791406,42.49925115410781,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12 Mile - NB xover</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2850542521838,42.49914197536742,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12 Mile</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.28519660000001,42.5011143,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: N of 12 Mile - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2851436,42.5029093,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12.5 Mile - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2851503,42.5084161,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: N of Rushmore Circle - SB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.28548189999999,42.5115963,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: S of 13 Mile - NB</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2855629,42.5136006,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 13 Mile</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.285679,42.5154419,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 13 Mile-NB Service Dr</name>
+				<open>1</open>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.28582706190609,42.51716781127762,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Washington and Jefferson</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0480730810645,42.3274602037884,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned and Washington</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0484775448454,42.3280106740198,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned and Shelby</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0473278202455,42.3285355320186,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned and Griswaold</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.045860969239,42.3291397071356,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned and Woodward</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0452126924258,42.3295317479906,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned Pedestrian</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0441676051842,42.3299646756524,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned and Randolph</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0425248011735,42.3305741294652,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned and Brush</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0413509161395,42.3311187765086,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Larned and Beaubien</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0401681500805,42.3316495731647,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Beaubien</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0407371554302,42.3324551104054,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Brush</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0420945013717,42.3318495475382,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Randolph</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0432152267745,42.3314475516466,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Bates</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.044587454523,42.3307721792798,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Woodward</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0457080329338,42.3302746041661,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Griswold</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0465502532897,42.3299284383322,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Shelby</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.048099372278,42.3291745638883,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Congress and Washington</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.0493406596319,42.3287300281434,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+		                <name>Palo Alto</name>
+               			<styleUrl>#RSUs</styleUrl>
+               			<Point>
+                    			<coordinates>-122.134444,37.419015,0</coordinates>
+                		</Point>
+            		</Placemark>
+			<Placemark>
+				<name>Atwater at Civic Center Drive</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.045781,42.326097</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Atwater Street at St Antoine Street</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.036808,42.329272</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Beck Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.5157,42.4958</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Bunker Hill Dr</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3889,42.4983</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Drake Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3977,42.4979</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Farmington Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3784,42.4988</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Haggerty Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4363,42.497</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Halsted Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4171,42.4975</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Kendallwood Dr</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3699,42.499</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Meadowbrook Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4564,42.4964</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Middlebelt Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3393,42.4995</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Novi Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.476,42.4955</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Twelve Oaks Cres</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4662,42.4957</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Orchard Lake Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3587,42.4993</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Inkster</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3196,42.5003</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Northwestern</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3081,42.50055</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Franklin</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3047,42.50064</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Case</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2961,42.50085</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Lockdale</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2901,42.50098</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12 Mile and Bell</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.2717,42.50131</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nwstn crossover N of 12</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3095,42.50137</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nwstn crossover S of 12</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.3068,42.49989</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>10 Mile and Haggerty Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4351,42.4678</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>9 Mile and Haggerty Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4345,42.4536</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hills Tech Dr and Haggerty Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4359,42.4898</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Grand River Ave and Haggerty Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4352,42.4716</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>8 Mile and Haggerty Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-83.4364,42.4386</coordinates>
+				</Point>
+			</Placemark>
+
+			<!-- Pittsburgh -->
+			<Placemark>
+				<name>Centre Ave and South Highland Ave</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-79.925120,40.459993</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Centre Ave and Euclid Ave</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-79.928949,40.458735</coordinates>
+				</Point>
+			</Placemark>
+
+			<!-- Cranberry -->
+			<Placemark>
+				<name>Rt.19 and Rowan Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-80.104364,40.703948</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rt.19 and Rochester Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-80.104454,40.699057</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rt.19 and American Way</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-80.104502,40.695848</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rt.19 and Dutilh Rd</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-80.104003,40.693062</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rt.19 and Cranberry Square Dr</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-80.102852,40.690032</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rt.19 and Short St</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-80.101979,40.687586</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rt.19 and Rt. 228</name>
+				<styleUrl>#RSUs</styleUrl>
+				<Point>
+					<coordinates>-80.101304,40.684908</coordinates>
+				</Point>
+			</Placemark>
+			
+			
+			
+
+
+		</Folder>
+	</Folder>
+</Document>
+</kml>

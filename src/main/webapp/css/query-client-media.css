@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+	.navbar-brand {
+		font-size: 12px;
+	}
+	.top-space{
+		margin-top: 5px;
+	}
+	.form-input-2{
+		height: 440px;
+	}
+}
+
+@media (max-width: 991px){
+	.help-block{
+		font-size: 12px;
+	}
+}

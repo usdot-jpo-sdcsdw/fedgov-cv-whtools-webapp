@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Connected Vehicle Warehouse Tools</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="css/jquery-gmaps-latlon-picker.css">
+	<link rel="stylesheet" href="css/query-client-media.css">
+	<link rel="stylesheet" href="css/query-client.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="js/bootstrapvalidator/dist/css/bootstrapValidator.css">
+
+	<!-- BOOTLEAF TEMPLATE HEADER -->
+
+	<link rel="stylesheet" href="external/bootleaf-master/assets/leaflet-0.7.2/leaflet.css">
+	
+	<!-- MODIFIED BOOTLEAF STYLE SHEET -->
+		<!-- changes made to html/body overflow and header text -->
+	<link rel="stylesheet" href="external/bootleaf-master/assets/css/app.css">
+        
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+	<link rel="apple-touch-icon" href="external/bootleaf-master/assets/img/favicon-152.png">
+	<link rel="shortcut icon" sizes="196x196" href="external/bootleaf-master/assets/img/favicon-196.png">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="external/bootleaf-master/assets/js/html5shiv.js"></script>
+		<script src="external/bootleaf-master/assets/js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- MODIFIED OPENLAYERS STYLE SHEET -->
+		<!-- changes made to attribution and to remove layer view -->
+		<link rel="stylesheet" href="external/OpenLayers-2.13.1/theme/default/style.css" type="text/css">
+
+</head>
+
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img class="headerimg" id="headerimg">&nbsp;Connected Vehicle Warehouse Tools</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav" data-tabs="tabs">
+					<li class="" id="query-tab" style="display: none"><a data-toggle="tab" href="#Query" onclick="mapHide();">Warehouse Query <i id="queryIndicator" class="fa fa-circle"></i></a></li>
+					<li class="" id="subscription-tab" style="display: none"><a data-toggle="tab" href="#Subscribe" onclick="mapHide();">SDC Subscription <i id="subscribeIndicator" class="fa fa-circle"></i></a></li>
+					<li class="" id="deposit-tab" style="display: none"><a data-toggle="tab" href="#Deposit" onclick="mapHide();">Data Deposit <i id="depositIndicator" class="fa fa-circle"></i></a></li>
+					<li class="" id="map-tab" style="display: none"><a data-toggle="tab" href="#Map-App" onclick="mapReveal();">Map Application <i id="mapIndicator" class="fa fa-circle"></i></a></li>
+					<li id="mapTools" class="dropdown" style="display: none">
+                        <a id="toolsDrop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe" style="color: white"></i>&nbsp;&nbsp;Map Tools <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;About</a></li>
+                        	<li class="divider hidden-xs"></li>
+                            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="Reset(); return false;"><i class="fa fa-arrows-alt"></i>&nbsp;&nbsp;Reset Zoom</a></li>
+                            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="toggle(); return false;"><i class="fa fa-list"></i>&nbsp;&nbsp;Area Selection</a></li>
+                            <li class="divider hidden-xs"></li>
+                            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="LegendToggle();"><i id="legendIcon" class="fa fa-picture-o"></i>&nbsp;&nbsp;Show Legend</a></li>
+                            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="Clear(); return false;"><i class="fa fa-refresh"></i>&nbsp;&nbsp;Clear Vehicles</a></li>
+                            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="ToggleRSU(); return false;"><i id="rsuIcon" class="fa fa-check-square-o"></i>&nbsp;&nbsp;Show RSU Layer</a></li>
+                            <li class="divider hidden-xs"></li>
+                            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="RunWebsocketDemo(); return false;"><i id="playApp" class="fa fa-play-circle"></i>&nbsp;&nbsp;Start Application</a></li>
+                            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="StopWebsocketDemo(); return false;"><i class="fa fa-stop"></i>&nbsp;&nbsp;Stop Application</a></li>
+                            <li id="runTest"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="WebSocketTest(); return false;"><i class="fa fa-cog"></i>&nbsp;&nbsp;Test Websocket</a></li>
+                        </ul>
+                    </li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+
+	<div id="my-tab-content" class="tab-content">
+	
+		<!--*********************************************** QUERY *********************************************-->
+	
+		<div id="Query" class="tab-pane fade in">
+			<div class="container">
+
+				<div class="page-header">
+					<p class="lead">To Query the SDPC: 1. Connect to the Warehouse
+						2. Enter and Submit your criteria 3. View your results</p>
+				</div>
+
+				<form class="form-horizontal result-form" role="form">
+					<div class="form-group">
+						<label for="wsURL"
+							class="col-lg-2 col-md-2 col-sm-2 control-label">Warehouse
+							URL</label>
+						<div class="col-lg-7 col-md-7 col-sm-7">
+							<input type="text" class="form-control" id="wsURL" disabled>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<button id="connect" type="button"
+								class="btn btn-primary btn-sm top-space">Connect</button>
+							<button id="disconnect" type="button"
+								class="btn btn-primary btn-sm top-space">Disconnect</button>
+						</div>
+					</div>
+
+					<div class="query-form">
+						<div class="row">
+							<div class="col-lg-7 col-md-7 col-sm-7">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="form-group">
+											<label for="systemQueryName"
+												class="col-lg-2 col-md-2 col-sm-2 control-label">System
+												Name</label>
+											<div class="col-lg-5 col-md-5 col-sm-7">
+												<select id="systemQueryName" class="form-control">
+													<option value="SDW 2.3">SDW 2.3</option>
+													<option value="SDPC 2.3" selected>SDPC 2.3</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="dialogID"
+												class="col-lg-2 col-md-2 col-sm-2 control-label">Dialog
+												ID</label>
+											<div class="col-lg-5 col-md-5 col-sm-7">
+												<select id="dialogID" class="form-control">
+													<option value="154" selected>154 (vehSitDataMessage)</option>
+													<option value="156">156 (travelerInformation)</option>
+													<option value="162">162 (intersectionSitData)</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="startDate"
+												class="col-lg-2 col-md-2 col-sm-2 control-label">Start
+												Date</label>
+											<div class="col-lg-6 col-md-6 col-sm-6">
+												<div class="input-group date form_datetime"
+													data-date="2014-09-16T05:25:07Z"
+													data-date-format="yyyy-mm-ddThh:ii:ss">
+													<input id="startDate" class="form-control" type="text"
+														value="" readonly=""> <span class="input-group-addon"><span
+														id="clearStartDate" class="glyphicon glyphicon-remove"></span></span>
+													<span class="input-group-addon"><span
+														class="glyphicon glyphicon-calendar"></span></span>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+												<select id="startDateOperator"
+													class="form-control top-space">
+													<option value="GT">&gt;</option>
+													<option value="GTE" selected>&gt;=</option>
+													<option value="LT">&lt;</option>
+													<option value="LTE">&lt;=</option>
+												</select>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 top-space">
+												<span class="help-block">Operator</span>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="endDate"
+												class="col-lg-2 col-md-2 col-sm-2 control-label">End
+												Date</label>
+											<div class="col-lg-6 col-md-6 col-sm-6">
+												<div class="input-group date form_datetime"
+													data-date="2014-09-16T05:25:07Z"
+													data-date-format="yyyy-mm-ddThh:ii:ss">
+													<input id="endDate" class="form-control" type="text"
+														value="" readonly=""> <span class="input-group-addon"><span
+														id="clearEndDate" class="glyphicon glyphicon-remove"></span></span>
+													<span class="input-group-addon"><span
+														class="glyphicon glyphicon-calendar"></span></span>
+												</div>
+											</div>
+											<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 top-space">
+												<select id="endDateOperator" class="form-control">
+													<option value="GT">&gt;</option>
+													<option value="GTE">&gt;=</option>
+													<option value="LT">&lt;</option>
+													<option value="LTE" selected>&lt;=</option>
+												</select>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 top-space">
+												<span class="help-block">Operator</span>
+											</div>
+										</div>
+
+										<div id="nwPicker" class="gllpLatlonPicker">
+											<div class="form-group">
+												<label for="northWestCorner"
+													class="col-lg-2 col-md-2 col-sm-2 control-label">NW
+													Corner Lat/Lng</label>
+												<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+													<input type="text" class="form-control gllpLatitude"
+														value="43.652969118285434" id="nwLat" name="nwLat">
+												</div>
+												<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+													<input type="text" class="form-control gllpLongitude"
+														value="-85.94707489013672" id="nwLon" name="nwLon">
+												</div>
+												<div class="col-lg-1 col-md-1 col-sm-1 top-space">
+													<span id="toggleNWMap" class="glyphicon glyphicon-globe" /></span>
+												</div>
+												<input type="hidden" class="gllpZoom" value="5" />
+											</div>
+											<div id="nwMap" class="form-group map-adjust"
+												style="display: none;">
+												<div class="col-lg-offset-2 gllpMap">Google Maps</div>
+											</div>
+										</div>
+
+										<div id="sePicker" class="gllpLatlonPicker">
+											<div class="form-group">
+												<label for="southEastCorner"
+													class="col-lg-2 col-md-2 col-sm-2 control-label">SE
+													Corner Lat/Lng</label>
+												<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+													<input type="text" class="form-control gllpLatitude"
+														value="40.96538194577475" id="seLat" name="seLat">
+												</div>
+												<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+													<input type="text" class="form-control gllpLongitude"
+														value="-81.03858947753906" id="seLon" name="seLon">
+												</div>
+												<div class="col-lg-1 col-md-1 col-sm-1 top-space">
+													<span id="toggleSEMap" class="glyphicon glyphicon-globe"></span>
+												</div>
+												<input type="hidden" class="gllpZoom" value="5" />
+											</div>
+											<div id="seMap" class="form-group map-adjust"
+												style="display: none;">
+												<div class="col-lg-offset-2 gllpMap">Google Maps</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-5">
+								<div class="panel panel-default form-input-2">
+									<div class="panel-body">
+										<div class="form-group">
+											<label for="orderByField"
+												class="col-lg-2 col-md-2 col-sm-3 col-xs-6 control-label">Order
+												By</label>
+
+											<div class="col-lg-8 col-md-8 col-sm-7 col-xs-8">
+												<select id="orderByField" class="form-control">
+													<option value="" selected></option>
+													<option value="createdAt">createdAt</option>
+													<option value="requestId">requestId</option>
+												</select>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+												<span class="help-block">Field</span>
+											</div>
+											<div
+												class="col-lg-8 col-md-8 col-sm-7 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-3">
+												<select id="orderByOrder" class="form-control">
+													<option value="1">Ascending</option>
+													<option value="-1" selected>Descending</option>
+												</select>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+												<span class="help-block">Order</span>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="options"
+												class="col-lg-2 col-md-2 col-sm-3 col-xs-6 control-label text-right">Query
+												Options</label>
+											<div class="col-lg-8 col-md-8 col-sm-7 col-xs-8">
+												<input type="text" class="form-control" id="skip"
+													name="skip" value="0">
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+												<span class="help-block">Skip</span>
+											</div>
+											<div
+												class="col-lg-8 col-md-8 col-sm-7 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-3">
+												<input type="text" class="form-control" name="limit"
+													id="limit" value="100">
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+												<span class="help-block">Limit</span>
+											</div>
+											<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+											<div
+												class="col-lg-5 col-md-5 col-sm-5 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-3">
+												<select id="resultEncoding" class="form-control">
+													<option value="hex" selected>Hex</option>
+													<option value="base64">Base64</option>
+													<option value="full">Full (JSON)</option>
+												</select>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+												<span class="help-block">Encoding</span>
+											</div>
+										</div>
+
+										<div class="form-group submitQuery">
+											<div
+												class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-7 col-md-offset-6 col-sm-offset-5 col-xs-offset-4">
+												<button id="submitQuery" type="submit"
+													class="btn btn-primary btn-sm">Submit Query</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- Query -->
+				
+						<hr>
+
+						<div class="row">
+							<div class="col-lg-7 col-md-7 col-sm-7">
+								<div class="form-group">
+									<label for="dialogID"
+										class="col-lg-12 col-md-12 col-sm-12 control-label text-left">Query
+										Results</label>
+									<div class="col-lg-12 col-md-12 col-sm-12">
+										<textarea readonly class="form-control" rows="10" id="results"></textarea>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-lg-4 col-md-4 col-sm-4">
+										<button id="clearResults" type="button"
+											class="btn btn-primary btn-sm">Clear Results</button>
+										<img id="spinner" src="img/spinner.gif" />
+									</div>
+									<div
+										class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-4 text-right">
+										<span class="help-block">Record Count</span>
+									</div>
+									<div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 top-space">
+										<input type="text" class="form-control" value=""
+											id="recordCount" disabled>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-5 col-md-5 col-sm-5">
+								<div class="form-group">
+									<label for="rawQuery"
+										class="col-lg-12 col-md-12 col-sm-12 control-label text-left">Query
+										History</label>
+									<div class="col-lg-12 col-md-12 col-sm-12">
+										<textarea readonly class="form-control" rows="10"
+											id="rawQuery"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-4 col-md-4 col-sm-4">
+										<button id="clearHistory" type="button"
+											class="btn btn-primary btn-sm">Clear History</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						</form>
+					</div><!-- Container -->
+			</div>
+
+		<!--*********************************************** SUSCRIBE *********************************************-->
+
+		<div id="Subscribe" class="tab-pane fade in">
+			<div class="container">
+				<div class="page-header">
+					<p class="lead">To Subscribe to the SDC: 1. Connect to the
+						Warehouse 2. Enter and Submit your criteria 3. View connection</p>
+				</div>
+
+				<form class="form-horizontal result-form" role="form">
+					<div class="form-group">
+						<label for="wbsURL"
+							class="col-lg-2 col-md-2 col-sm-2 control-label">Warehouse
+							URL</label>
+						<div class="col-lg-7 col-md-7 col-sm-7">
+							<input type="text" class="form-control" id="wbsURL" disabled>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<button id="wbsConnect" type="button"
+								class="btn btn-primary btn-sm top-space">Connect</button>
+							<button id="wbsDisconnect" type="button"
+								class="btn btn-primary btn-sm top-space">Disconnect</button>
+						</div>
+					</div>
+				</form>
+
+				<form class="form-horizontal result-form" role="form">
+
+					<div class="subscribe-form">
+						<div class="col-lg-7 col-md-7 col-sm-7">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="form-group">
+										<label for="systemSubName"
+											class="col-lg-2 col-md-2 col-sm-2 control-label">System
+											Name</label>
+										<div class="col-lg-5 col-md-5 col-sm-7">
+											<select id="systemSubName" class="form-control">
+												<option value="SDC 2.3" selected>SDC 2.3</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="dialogID"
+											class="col-lg-2 col-md-2 col-sm-2 control-label">Dialog
+											ID</label>
+										<div class="col-lg-5 col-md-5 col-sm-7">
+											<select id="dialogID" class="form-control">
+												<option value="154" selected>154 (vehSitDataMessage)</option>
+												<option value="162">162 (intersectionSitData)</option>
+											</select>
+										</div>
+									</div>
+
+									<div id="nwPicker2" class="gllpLatlonPicker">
+										<div class="form-group">
+											<label for="northWestCorner"
+												class="col-lg-2 col-md-2 col-sm-2 control-label">NW
+												Corner Lat/Lng</label>
+											<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+												<input type="text" class="form-control gllpLatitude"
+													value="43.652969118285434" id="nwLat2" name="nwLat">
+											</div>
+											<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+												<input type="text" class="form-control gllpLongitude"
+													value="-85.94707489013672" id="nwLon2" name="nwLon">
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 top-space">
+												<span id="toggleNWMap2" class="glyphicon glyphicon-globe" /></span>
+											</div>
+											<input type="hidden" class="gllpZoom" value="5" />
+										</div>
+										<div id="nwMap2" class="form-group map-adjust"
+											style="display: none;">
+											<div class="col-lg-offset-2 gllpMap">Google Maps</div>
+										</div>
+									</div>
+
+									<div id="sePicker2" class="gllpLatlonPicker">
+										<div class="form-group">
+											<label for="southEastCorner"
+												class="col-lg-2 col-md-2 col-sm-2 control-label">SE
+												Corner Lat/Lng</label>
+											<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+												<input type="text" class="form-control gllpLatitude"
+													value="40.96538194577475" id="seLat2" name="seLat">
+											</div>
+											<div class="col-lg-4 col-md-4 col-sm-4 top-space">
+												<input type="text" class="form-control gllpLongitude"
+													value="-81.03858947753906" id="seLon2" name="seLon">
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 top-space">
+												<span id="toggleSEMap2" class="glyphicon glyphicon-globe"></span>
+											</div>
+											<input type="hidden" class="gllpZoom" value="5" />
+										</div>
+										<div id="seMap2" class="form-group map-adjust"
+											style="display: none;">
+											<div class="col-lg-offset-2 gllpMap">Google Maps</div>
+										</div>
+									</div>
+
+									<div class="form-group" id="vsmType">
+										<label for="vsmType"
+											class="col-lg-2 col-md-2 col-sm-2 control-label">VSM
+											Type</label>
+										<div class="col-lg-5 col-md-5 col-sm-7">
+											<div id="vsmType">
+												<div class="checkbox">
+													<label><input type="checkbox" value="fund">
+														fund(1)</label>
+												</div>
+												<div class="checkbox">
+													<label><input type="checkbox" value="vehstat">
+														vehstat(2)</label>
+												</div>
+												<div class="checkbox">
+													<label><input type="checkbox" value="weather">
+														weather(4)</label>
+												</div>
+												<div class="checkbox">
+													<label><input type="checkbox" value="env">
+														env(8)</label>
+												</div>
+												<div class="checkbox">
+													<label><input type="checkbox" value="elveh">
+														elveh(16)</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="options"
+											class="col-lg-2 col-md-2 col-sm-3 col-xs-6 control-label text-right">Result Encoding</label>
+										<div class="col-lg-5 col-md-5 col-sm-5 col-xs-8">
+											<select id="resultEncoding" class="form-control">
+												<option value="hex" selected>Hex</option>
+												<option value="base64">Base64</option>
+											</select>
+										</div>
+										<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+											<span class="help-block">Encoding</span>
+										</div>
+									</div>
+								</div><!-- Panel Body -->
+							</div><!-- Panel -->
+						</div>
+					</div><!-- Form -->
+				
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<div class="panel panel-default form-results-sub">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div class="form-group">
+										<label for="subResults"
+											class="col-lg-12 col-md-12 col-sm-12 control-label text-left">Subscription
+											Results</label>
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<textarea readonly class="form-control" rows="16"
+												id="subResults"></textarea>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+											<button id="submitSubscription" type="submit"
+												class="btn btn-primary btn-sm">Submit Subscription</button>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+											<button id="clearSubscription" type="button"
+												class="btn btn-primary btn-sm">Clear Results</button>
+											<img id="spinner2" src="img/spinner.gif" />
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2">
+											<input type="text" class="form-control" value=""
+											id="wbsRecordCount" disabled>
+										</div>
+									</div>
+								</div>
+							</div><!-- Row -->
+						</div><!-- Panel Body -->
+					</div><!-- Panel -->
+				</div><!-- Panel Size -->
+				</form>
+			</div><!-- Container -->
+		</div><!-- Subscribe -->
+		
+		<!--*********************************************** DEPOSIT *********************************************-->
+
+		<div id="Deposit" class="tab-pane fade in">
+			<div class="container">
+				<div class="page-header">
+					<p class="lead">To deposit messages: 1. Connect to the
+						Warehouse 2. Enter and Submit your criteria 3. View results</p>
+				</div>
+
+				<form class="form-horizontal result-form" role="form">
+					<div class="deposit-form">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="form-group">
+											<label for="systemDepositName"
+												class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 control-label">Input Option:</label>
+											<div class="col-lg-4 col-md-4 col-sm-6">
+												<select id="entryType" class="form-control">
+													<option value="fileEntry" selected>File Upload</option>
+													<option value="textEntry">Text Entry</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="systemDepositName"
+												class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 control-label">System
+												Name:</label>
+											<div class="col-lg-4 col-md-4 col-sm-6">
+												<select id="systemDepositName" class="form-control">
+													<option value="SDC 2.3" selected>SDC 2.3</option>
+													<option value="SDW 2.3">SDW 2.3</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="encodingType"
+												class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 control-label">Data
+												Encoding: </label>
+											<div class="col-lg-4 col-md-4 col-sm-6">
+												<select id="encoding-type-options" class="form-control">
+													<option value="HEX">Hexadecimal</option>
+													<option value="Base64">Base 64</option>
+												</select>
+											</div>
+										</div>
+										<hr>
+										
+										<div id="upload-file" class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+											<div class="form-group">
+												<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+												<div class="upload">
+													<label class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-4 col-md-offset-4 col-sm-offset-4" for="fileselect">File to upload:</label>
+													<input type="file" id="fileselect" name="fileselect" />
+													<!--<div id="filedrag">or drop files here</div>-->
+
+												</div>
+											</div>
+										</div>
+										
+										<div id="message-text" class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+											<div class="form-group">
+												<label for="dialogID"
+													class="col-lg-12 col-md-12 col-sm-12 control-label text-left">Messages</label>
+												<div class="col-lg-12 col-md-12 col-sm-12">
+													<textarea class="form-control" rows="10"
+														id="encoded-msg-textarea" placeholder="Enter your ASN.1 message to validate."></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-lg-offset-5 col-md-offset-5 col-sm-offset-5">
+											<div class="form-group">
+												<div class="row">
+													<div class="col-lg-1 col-md-1 col-sm-1">
+														<button id="submitFile" type="submit"
+															class="btn btn-primary btn-sm">Submit
+															File</button>
+													</div>
+													<div class="col-lg-1 col-md-1 col-sm-1">
+														<button id="clearFile" type="button"
+															class="btn btn-primary btn-sm">Clear Form</button>
+														<img id="spinner2" src="img/spinner.gif" />
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div><!-- /col-lg-12 -->
+						</div><!-- /row -->
+					</div><!-- /deposit-form -->
+				</form>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="0"
+						aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<span class="amt">0%</span>
+					</div>
+				</div>
+			</div><!-- /container -->
+		</div><!-- /deposit -->
+
+		<!--*********************************************** MAP *********************************************-->
+		
+		<div id="Map-App" class="tab-pane fade in">
+		
+        <div id="legend" class="shown">
+            <button type="button" class="close" onclick="LegendToggle();">&times;</button>
+            <h4 class="legend-title">Map Legend</h4>
+            <div class="legend-body">
+                <p>
+                <ul class="legend-group">
+                    <li class="legend-group-item"><i class="fa fa-car" style="color: #008000"></i>&nbsp;&nbsp;&nbsp;&nbsp;Speed greater than or equal to 21</li>
+                    <li class="legend-group-item group-item-minor"><i class="fa fa-car" style="color: #FFD801"></i>&nbsp;&nbsp;&nbsp;&nbsp;Speed greater than or equal to 5 but less than 21</li>
+                    <li class="legend-group-item group-item-minor"><i class="fa fa-car" style="color: #FF0000"></i>&nbsp;&nbsp;&nbsp;&nbsp;Speed greater than or equal to 0 but less than 5</li>
+                    <li class="legend-group-item group-item-minor"><i class="fa fa-square" style="color: #990000"></i>&nbsp;<i class="fa fa-square" style="color: #CC9900"></i>&nbsp;<i class="fa fa-square" style="color: #006600"></i>&nbsp;&nbsp;&nbsp;&nbsp;Traffic Signal</li>
+                    <li class="legend-group-item group-item-minor">
+	                    <img height="15%" width="15%" style="margin-left: -4px; padding: 0px" src="http://maps.google.com/mapfiles/kml/pal4/icon56.png" alt="Roadside Unit">
+	                    </i>&nbsp; Road Side Unit</li>
+                    <hr>
+                	<li class="legend-group-item"><i class="fa fa-car" style="color: black"></i>&nbsp;&nbsp;&nbsp;&nbsp;Msgs Received: <span id="message_counter"></span></li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div id="map"></div>
+        
+        <div id="sidebar" class="nano">
+            <div class="close" onclick="toggle();">x</div>
+            <h4>Area of Interest</h4>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="poi-tabs">
+                <li class="active"><a href="#cities" onclick="$('#poi-tabs a[href=\'#cities\']').tab('show'); return false;">Cities</a></li>
+                <li class=""><a href="#custom" onclick="$('#poi-tabs a[href=\'#custom\']').tab('show'); return false;">Custom Region</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="cities">
+                    <p>
+                    <div class="row">
+                        <div class="col-xs-8 col-md-8">
+                            <input type="text" class="form-control search" placeholder="Search" />
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <button type="button" class="btn btn-primary pull-right sort" data-sort="State"><i class="fa fa-sort"></i>&nbsp;&nbsp;Sort</button>
+                        </div>
+                    </div>
+                    <table class="table table-condensed table-striped" id="cities-table">
+                        <thead>
+                        <tr>
+                            <th class="sort" data-sort="State">State</th>
+                            <th class="sort" data-sort="City">City</th>
+                        <tr>
+                        </thead>
+                        <tbody class="list"></tbody>
+                    </table>
+                    </p>
+                </div>
+                <div class="tab-pane" id="custom">
+                    <p>
+                    <table class="table table-condensed table-striped" id="custom-table">
+                        <thead><b>Bounding Box:</b></thead>
+                        <fieldset id="bbInputs">
+                            <label for="nwLat-bbox">NW Latitude: </label>
+                            <span><input id="nwLat-bbox" type="number" step="any" placeholder="NorthWest Latitude" required></span>
+                            <label for="nwLong-bbox">NW Longitude: </label>
+                            <span><input id="nwLong-bbox" type="number" step="any" placeholder="NorthWest Longitude" required></span>
+                            <label for="seLat-bbox">SE Latitude: </label>
+                            <span><input id="seLat-bbox" type="number" step="any" placeholder="SouthEast Latitude" required></span>
+                            <label for="seLong-bbox">SE Longitude: </label>
+                            <span><input id="seLong-bbox" type="number" step="any" placeholder="SouthEast Longitude" required></span>
+                        </fieldset>
+                        <fieldset id="bbActions">
+                            <button id="bbRegion_btn" type="button" class="btn btn-primary" onclick="BoundingBoxSidebarClick(); return false;">Submit</button>
+                        </fieldset>
+                        <li class="spacer"></li>
+                        <thead><b>Center Point:</b></thead>
+                        <fieldset id="inputs">
+                            <label for="centerLat">Latitude: </label>
+                            <span><input id="centerLat" type="number" step="any" placeholder="Latitude" required></span>
+                            <label for="centerLong">Longitude: </label>
+                            <span><input id="centerLong" type="number" step="any" placeholder="Longitude" required></span>
+                            <label for="zoomLevel">Zoom Level: </label>
+                            <span><input id="zoomLevel" type="number" placeholder="Zoom Level" required></span>
+                        </fieldset>
+                        <fieldset id="actions">
+                            <button id="region_btn" type="button" class="btn btn-primary" onclick="CenterPointSidebarClick(); return false;">Submit</button>
+                        </fieldset>
+                    </table>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Welcome to the Connected Vehicles GUI!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs" id="aboutTabs">
+                            <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;About the project</a></li>
+                        </ul>
+                        <div class="tab-content" id="aboutTabsContent" style="padding-top: 10px;">
+                            <div class="tab-pane fade active in" id="about">
+                                <p>Welcome to the USDOT Connected Vehicles GUI web application. All functions currently reside under the tools menu.</p>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">Features</div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Start, stop and reset the appliation from the tools menu.</li>
+                                        <li class="list-group-item">Leidos' DigitalEdge integration used for storage and data enrichment.</li>
+                                        <li class="list-group-item">Zoom and pan street map using OpenLayers.</li>
+                                        <li class="list-group-item">Marker color based on vehicle speed.</li>
+                                        <li class="list-group-item">Custom and preset boundary selections.</li>
+                                        <li class="list-group-item">jQuery loading of external GeoJSON files coming soon!</li>
+                                        <li class="list-group-item">Framework based on <a href="http://getbootstrap.com/">Bootstrap 3</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, and <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>. Open source, MIT licensed, and available on <a href="https://github.com/bmcbride/bootleaf" target="_blank">GitHub</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+	</div><!-- Map -->		
+</div>
+	
+	
+	<!-- Placed at the end of the document so the pages load faster -->
+	
+	<script src="js/config.js"></script>
+	
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	<script src="js/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/jquery-gmaps-latlon-picker.js"></script>
+	<script src="js/query-client.js"></script>
+	<script src="js/validators.js"></script>
+	<script src="js/data-deposit.js">
+	<!--<script src="js/filedrag.js"></script>-->
+
+	<!-- BOOTLEAF TEMPLATE SCRIPTS -->
+
+	<script src="external/bootleaf-master/assets/typeahead-0.10.2/typeahead.bundle.min.js"></script>
+	<script src="external/bootleaf-master/assets/handlebars-1.3.0/handlebars.js"></script>
+	<script src="external/bootleaf-master/assets/list-1.1.1/list.min.js"></script>
+	<script src="external/bootleaf-master/assets/leaflet-0.7.2/leaflet.js"></script>
+	<script src="external/bootleaf-master/assets/leaflet-activearea/L.activearea.js"></script>
+
+	<!-- OPENLAYERS TEMPLATE SCRIPTS -->
+
+	<script src="external/OpenLayers-2.13.1/OpenLayers.js"></script>
+        
+	<!-- CORE SCRIPTS -->
+        
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Test Bed RSUs.kml</name>
+	<Schema parent="Placemark" name="S_test_DD">
+		<SimpleField type="double" name="_83_35371"></SimpleField>
+		<SimpleField type="double" name="_2_39042"></SimpleField>
+	</Schema>
+	<Schema parent="Placemark" name="S_DTE_Intersection_RSEs_Part_1_DD">
+		<SimpleField type="double" name="POINT_X"></SimpleField>
+		<SimpleField type="double" name="POINT_Y"></SimpleField>
+	</Schema>
+	<Schema parent="Placemark" name="S_DTE_Freeway_RSEs_DD">
+		<SimpleField type="double" name="POINT_X"></SimpleField>
+		<SimpleField type="double" name="POINT_Y"></SimpleField>
+	</Schema>
+	<Style id="s_ylw-pushpin04">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl5000">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_304">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_shaded_dot5">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin040</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_shaded_dot16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin04000">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_A31">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_A700</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_A3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin040">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_shaded_dot10">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_shaded_dot010">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_A700">
+		<IconStyle>
+			<color>ffff0055</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_shaded_dot20">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_shaded_dot1">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.9</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl500">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0400</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl500</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_shaded_dot02">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0400">
+		<IconStyle>
+			<color>ffffff00</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_shaded_dot3">
+		<IconStyle>
+			<color>ffff0055</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_302">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0</scale>
+		</LabelStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_shaded_dot">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_W_copy10">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight00">
+		<IconStyle>
+			<color>ff7faaff</color>
+			<scale>1.65455</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl50">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_370">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_304</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_301</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_shaded_dot2">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.30001</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.9</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_shaded_dot30">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_target">
+		<IconStyle>
+			<color>ffff55aa</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_301">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_A3">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff000000</color>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_donut1">
+		<IconStyle>
+			<color>ff00aa00</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_3042">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0</scale>
+		</LabelStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin04000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl50</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_shaded_dot010">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl5000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_target1">
+		<IconStyle>
+			<color>ffff55aa</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_donut">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_donut</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_donut1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_shaded_dot4">
+		<IconStyle>
+			<color>ff00ff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sn_W_copy1001">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_shaded_dot1">
+		<IconStyle>
+			<color>ffff0055</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_target2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_target</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_target1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_placemark_circle00">
+		<IconStyle>
+			<color>ff7faaff</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_W_copy100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_W_copy1001</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_W_copy10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_shaded_dot21">
+		<IconStyle>
+			<color>ff00ff55</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.4</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_3701">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_3042</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_302</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_shaded_dot20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot21</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_shaded_dot2">
+		<IconStyle>
+			<color>ff7fff55</color>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="msn_shaded_dot200">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shaded_dot30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shaded_dot20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl5">
+		<IconStyle>
+			<color>ffffff00</color>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_donut">
+		<IconStyle>
+			<color>ff00aa00</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.2</scale>
+		</LabelStyle>
+	</Style>
+	<Folder>
+		<name>RSUs</name>
+		<open>1</open>
+		<Folder>
+			<name>Telegraph Road</name>
+			<Placemark>
+				<name>Telegraph Road: S of 9 Mile - NB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2783259,42.4558085,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 9 Mile</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2784771,42.4574191,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: No of 9 Mile - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2786399,42.4592565,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Garner - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2789848,42.4626903,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: S of 10 Mile - NB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2806037,42.470265,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 10 Mile</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2817354,42.4720011,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: N of 10 Mile - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2823245,42.4730437,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Raleigh Office Center - NB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2831932,42.4744597,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Denso Drive - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2851091,42.4780175,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Civic Center</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.28526960000001,42.4795001,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: Swanson - SB</name>
+				<styleUrl>#m_ylw-pushpin0000</styleUrl>
+				<Point>
+					<coordinates>-83.28551631448836,42.48261565747117,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 11 Mile Service Dr - NB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2849066,42.4961224,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: NW Service Dr - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2851028,42.4961883,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12 Mile - SB xover</name>
+				<styleUrl>#m_ylw-pushpin0001</styleUrl>
+				<Point>
+					<coordinates>-83.2852851791406,42.49925115410781,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12 Mile - NB xover</name>
+				<styleUrl>#m_ylw-pushpin0001</styleUrl>
+				<Point>
+					<coordinates>-83.2850542521838,42.49914197536742,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12 Mile</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.28519660000001,42.5011143,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: N of 12 Mile - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2851436,42.5029093,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 12.5 Mile - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2851503,42.5084161,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: N of Rushmore Circle - SB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.28548189999999,42.5115963,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: S of 13 Mile - NB</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.2855629,42.5136006,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 13 Mile</name>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-83.285679,42.5154419,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Telegraph Road: 13 Mile-NB Service Dr</name>
+				<open>1</open>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>-83.28582706190609,42.51716781127762,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>WiMAX</name>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>12 Mile Rd @ Twelve Oaks Cres</name>
+				<description>Off-Board Navigation Option #3</description>
+				<styleUrl>#msn_shaded_dot20</styleUrl>
+				<Point>
+					<coordinates>-83.46619,42.49585,0</coordinates>
+				</Point>
+				<POINT_X>-83.46619</POINT_X>
+				<POINT_Y>42.49585</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>Grand River Ave @ Novi Rd</name>
+				<description>In-Vehicle Signage: Icy Bridge Option #1
+In-Vehicle Signage: Next Exit Services Option #1
+Off-Board Navigation Option #1</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.47572745974001,42.48068430308413,0</coordinates>
+				</Point>
+				<POINT_X>-83.47554</POINT_X>
+				<POINT_Y>42.48081</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>12 Mile Rd @ Halsted Rd</name>
+				<description><![CDATA[POINT_X = -83.4172<br>POINT_Y = 42.4976<br>]]></description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.41723,42.49759,0</coordinates>
+				</Point>
+				<POINT_X>-83.41723</POINT_X>
+				<POINT_Y>42.49759</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>Oaks Dr @ Novi Rd</name>
+				<description>In-Vehicle Signage: Next Exit Services Option #1
+Off-Board Navigation Option #3
+Electronic Payment: Parking Option #2</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.4757706295694,42.49094092985,0</coordinates>
+				</Point>
+				<POINT_X>-83.47599</POINT_X>
+				<POINT_Y>42.49113</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>12 Mile Rd @ Meadowbrook Rd</name>
+				<description>Off-Board Navigation Option #3</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.45649708953668,42.49590180647014,0</coordinates>
+				</Point>
+				<POINT_X>-83.4566</POINT_X>
+				<POINT_Y>42.49601</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Freeway_RSEs_DD>
+				<name>I-96 @ I-275</name>
+				<description>Off-Board Navigation Option #1
+Off-Board Navigation Option #2
+Traveler Information Option #1
+Traveler Information Option #2
+In-Vehicle Signage: Next Exit Services Option #2</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.42630092939001,42.48009984269776,0</coordinates>
+				</Point>
+				<POINT_X>-83.43000000000001</POINT_X>
+				<POINT_Y>42.47893</POINT_Y>
+			</S_DTE_Freeway_RSEs_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>Crescent Blvd @ Novi Rd</name>
+				<description>In-Vehicle Signage: Next Exit Services Option #1</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.47542260775681,42.4837871025511,0</coordinates>
+				</Point>
+				<POINT_X>-83.47569</POINT_X>
+				<POINT_Y>42.48358</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Freeway_RSEs_DD>
+				<name>I-275 @ 8 Mile Rd</name>
+				<description>Off-Board Navigation Option #2
+Traveler Information Option #2
+In-Vehicle Signage: Next Exit Services Option #2
+WiMAX with Wi-Fi</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.43219855627844,42.43927395605364,0</coordinates>
+				</Point>
+				<POINT_X>-83.43231</POINT_X>
+				<POINT_Y>42.43935</POINT_Y>
+			</S_DTE_Freeway_RSEs_DD>
+			<S_DTE_Freeway_RSEs_DD>
+				<name>I-275 @ 6 Mile Rd</name>
+				<description>Off-Board Navigation  Option #2
+Traveler Information Option #2</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.423103096836,42.4105223346623,0</coordinates>
+				</Point>
+				<POINT_X>-83.42352</POINT_X>
+				<POINT_Y>42.41053</POINT_Y>
+			</S_DTE_Freeway_RSEs_DD>
+			<S_DTE_Freeway_RSEs_DD>
+				<name>I-96 @ Rt-5</name>
+				<description>Off-Board Navigation Option #1
+Off-Board Navigation Option #3
+Traveler Information Option #1
+Traveler Information Option #3
+In-Vehicle Signage: Next Exit Services Option #1</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.44752081295442,42.4839136061901,0</coordinates>
+				</Point>
+				<POINT_X>-83.44741000000001</POINT_X>
+				<POINT_Y>42.48508</POINT_Y>
+			</S_DTE_Freeway_RSEs_DD>
+			<S_DTE_Freeway_RSEs_DD>
+				<name>Rt-5 @ Grand River Ave</name>
+				<description>Off-Board Navigation Option #2
+WiMAX with Wi-Fi</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.41840224552651,42.46806129914815,0</coordinates>
+				</Point>
+				<POINT_X>-83.41634000000001</POINT_X>
+				<POINT_Y>42.46661</POINT_Y>
+			</S_DTE_Freeway_RSEs_DD>
+			<S_DTE_Freeway_RSEs_DD>
+				<name>I-275 @ 7 Mile Rd</name>
+				<description>Off-Board Navigation Option #2
+Traveler Information Option #2
+In-Vehicle Signage: Next Exit Services Option #2</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.42369320439417,42.42495490771031,0</coordinates>
+				</Point>
+				<POINT_X>-83.42393</POINT_X>
+				<POINT_Y>42.42485</POINT_Y>
+			</S_DTE_Freeway_RSEs_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>Grand River Ave @ 10 Mile Rd</name>
+				<description>Off-Board Navigation Option #2</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.42218166361087,42.46831787317092,0</coordinates>
+				</Point>
+				<POINT_X>-83.42166</POINT_X>
+				<POINT_Y>42.46842</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>11 Mile Rd @ Halsted Rd</name>
+				<description>CICAS Stop Sign Violation
+In-Vehicle Signage: School Zone Warning Option #1
+(Added for CICAS Stop Sign Violation &amp; In-Vehicle Signage: School Zone Warning)</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.41646496087299,42.48315898459771,0</coordinates>
+				</Point>
+				<POINT_X>-83.41723</POINT_X>
+				<POINT_Y>42.49759</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>Hills Tech Dr @ Halsted Rd</name>
+				<description><![CDATA[POINT_X = -83.4169<br>POINT_Y = 42.4928<br>]]></description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.41695,42.49278000000004,0</coordinates>
+				</Point>
+				<POINT_X>-83.41695</POINT_X>
+				<POINT_Y>42.49278</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+			<S_DTE_Intersection_RSEs_Part_1_DD>
+				<name>Grand River Ave @ Drake Rd</name>
+				<description>In-Vehicle Signage: School Zone Warning Option #1</description>
+				<styleUrl>#msn_W_copy100</styleUrl>
+				<Point>
+					<coordinates>-83.39617,42.46907,0</coordinates>
+				</Point>
+				<POINT_X>-83.39617</POINT_X>
+				<POINT_Y>42.46907</POINT_Y>
+			</S_DTE_Intersection_RSEs_Part_1_DD>
+		</Folder>
+		<Folder>
+			<name>3G</name>
+			<Folder>
+				<name>Test Units</name>
+				<Placemark>
+					<name>Cone2</name>
+					<description>42.65233333
+-83.223</description>
+					<LookAt>
+						<longitude>-83.2229190086299</longitude>
+						<latitude>42.65386342972769</latitude>
+						<altitude>0</altitude>
+						<heading>-0.1558714979081612</heading>
+						<tilt>0</tilt>
+						<range>1975.18612974966</range>
+						<altitudeMode>relativeToGround</altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_3701</styleUrl>
+					<Point>
+						<coordinates>-83.22300000000001,42.65233333,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walt Fehr</name>
+					<LookAt>
+						<longitude>-88.00443712320298</longitude>
+						<latitude>42.27416376495905</latitude>
+						<altitude>0</altitude>
+						<heading>-3.315582811907472</heading>
+						<tilt>0</tilt>
+						<range>275.2985748921743</range>
+						<altitudeMode>relativeToGround</altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_3701</styleUrl>
+					<Point>
+						<coordinates>-88.00429858826315,42.27404850687266,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Cone1</name>
+					<description>42.66183333
+-83.2225</description>
+					<LookAt>
+						<longitude>-83.2187907004167</longitude>
+						<latitude>42.65847466881196</latitude>
+						<altitude>0</altitude>
+						<heading>-0.1530746209222031</heading>
+						<tilt>0</tilt>
+						<range>1975.186129750261</range>
+						<altitudeMode>relativeToGround</altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_3701</styleUrl>
+					<Point>
+						<coordinates>-83.2225,42.66183333,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Security2</name>
+					<description>RSE 0019 (columbus)</description>
+					<LookAt>
+						<longitude>-83.22280503808371</longitude>
+						<latitude>42.65668784363737</latitude>
+						<altitude>0</altitude>
+						<heading>-0.1537746002817995</heading>
+						<tilt>0</tilt>
+						<range>403.1886425042609</range>
+						<altitudeMode>relativeToGround</altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_3701</styleUrl>
+					<Point>
+						<coordinates>-83.22333333,42.6575,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>3G Sites</name>
+				<open>1</open>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>12 Mile Rd @ Novi Rd</name>
+					<description>Off-Board Navigation Option #3
+In-Vehicle Signage: Next Exit Services</description>
+					<styleUrl>#msn_shaded_dot16</styleUrl>
+					<Point>
+						<coordinates>-83.47606281109584,42.49530980270562,0</coordinates>
+					</Point>
+					<POINT_X>-83.47622</POINT_X>
+					<POINT_Y>42.49551</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>9 Mile Rd @ Meadowbrook Rd</name>
+					<description><![CDATA[POINT_X = -83.4545<br>POINT_Y = 42.4528<br>
+Nisson STAP
+WiMAX with Wi-Fi]]></description>
+					<LookAt>
+						<longitude>-83.49846268872527</longitude>
+						<latitude>42.46416677773036</latitude>
+						<altitude>0</altitude>
+						<heading>-0.09938988198469004</heading>
+						<tilt>0</tilt>
+						<range>24892.36022460182</range>
+						<altitudeMode>relativeToGround</altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_shaded_dot200</styleUrl>
+					<Point>
+						<coordinates>-83.45443462482994,42.45290839866227,0</coordinates>
+					</Point>
+					<POINT_X>-83.45453000000001</POINT_X>
+					<POINT_Y>42.45277</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Freeway_RSEs_DD>
+					<name>I-96 @ Novi Rd</name>
+					<description>LTP-Tolling
+Off-Board Navigation Option #1
+Off-Board Navigation Option #3
+Traveler Information Option #1
+In-Vehicle Signage: Next Exit Services Option #1</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.47607380586155,42.48662167039044,0</coordinates>
+					</Point>
+					<POINT_X>-83.47434</POINT_X>
+					<POINT_Y>42.48668</POINT_Y>
+				</S_DTE_Freeway_RSEs_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Grand River Ave @ Market St</name>
+					<description>Off-Board Navigation Option #1</description>
+					<styleUrl>#msn_shaded_dot5</styleUrl>
+					<Point>
+						<coordinates>-83.46936,42.47943,0</coordinates>
+					</Point>
+					<POINT_X>-83.46936</POINT_X>
+					<POINT_Y>42.47943</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>12 Mile Rd @ Drake Rd</name>
+					<description>In-Vehicle Signage: School Zone Warning  Option #1</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.39773838769054,42.49802877053867,0</coordinates>
+					</Point>
+					<POINT_X>-83.39771</POINT_X>
+					<POINT_Y>42.4979</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Freeway_RSEs_DD>
+					<name>M5 &amp; Orchard Lake Rd</name>
+					<description>42°27&apos;8.11&quot;N
+ 83°21&apos;22.30&quot;W</description>
+					<styleUrl>#msn_shaded_dot10</styleUrl>
+					<Point>
+						<coordinates>-83.35619444444444,42.45225277777779,0</coordinates>
+					</Point>
+					<POINT_X>-83.37599</POINT_X>
+					<POINT_Y>42.456</POINT_Y>
+				</S_DTE_Freeway_RSEs_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Orchard Hill Pl @ Crystal Glenn Rear</name>
+					<description>Electronic Payment: Parking Option #1</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.43833961389984,42.44280102903372,0</coordinates>
+					</Point>
+					<POINT_X>-83.4388</POINT_X>
+					<POINT_Y>42.43877</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Freeway_RSEs_DD>
+					<name>I-696 @ Orchard Lake Rd</name>
+					<description>Off-Board Navigation Option #3
+Traveler Information Option #3
+In-Vehicle Signage: Icy Bridge Warning Option #2
+WiMAX with External Antenna</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.35818860722061,42.4944558338596,0</coordinates>
+					</Point>
+					<POINT_X>-83.35862</POINT_X>
+					<POINT_Y>42.49611</POINT_Y>
+				</S_DTE_Freeway_RSEs_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>8 Mile Rd @ Taft Rd</name>
+					<description><![CDATA[POINT_X = -83.4931<br>POINT_Y = 42.4371<br>]]></description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.49309,42.43713,0</coordinates>
+					</Point>
+					<POINT_X>-83.49309</POINT_X>
+					<POINT_Y>42.43713</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Freeway_RSEs_DD>
+					<name>I-96 @ Beck Rd.</name>
+					<description>Off-Board Navigation Option #1
+Traveler Information Option #1
+In-Vehicle Signage: Next Exit Services Option #1
+WiMAX with External Antenna</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.51628135678402,42.49353559482604,0</coordinates>
+					</Point>
+					<POINT_X>-83.51770999999999</POINT_X>
+					<POINT_Y>42.49405</POINT_Y>
+				</S_DTE_Freeway_RSEs_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>12 Mile Rd @ Beck Rd</name>
+					<description>Off-Board Navigation Option #1
+WiMAX with External Antenna</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.5156828632355,42.49580051736211,0</coordinates>
+					</Point>
+					<POINT_X>-83.51566</POINT_X>
+					<POINT_Y>42.49441</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>12 Mile Rd @ Kendallwood Dr</name>
+					<description><![CDATA[POINT_X = -83.3698<br>POINT_Y = 42.4989<br>]]></description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.36979999999998,42.4989,0</coordinates>
+					</Point>
+					<POINT_X>-83.3698</POINT_X>
+					<POINT_Y>42.4989</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Grand River Ave @ Beck Rd</name>
+					<description>In-Vehicle Signage: Icy Bridge Option #1
+Off-Board Navigation Option #1</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.51573784258672,42.48959991051563,0</coordinates>
+					</Point>
+					<POINT_X>-83.51546999999999</POINT_X>
+					<POINT_Y>42.48977</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>10 Mile Rd. @ Meadowbrook Rd</name>
+					<description><![CDATA[POINT_X = -83.4551<br>POINT_Y = 42.4672<br>]]></description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.45511999999998,42.46722000000001,0</coordinates>
+					</Point>
+					<POINT_X>-83.45511999999999</POINT_X>
+					<POINT_Y>42.46722</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Grand River Ave @ Napier Rd (Clover Ct)</name>
+					<description>Off-Board Navigation Option #1</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.5553571347194,42.49842870405478,0</coordinates>
+					</Point>
+					<POINT_X>-83.55546</POINT_X>
+					<POINT_Y>42.49861</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Grand River Ave @ Milford Rd</name>
+					<description>Off-Board Navigation Option #1</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.61599407043879,42.51156792990346,0</coordinates>
+					</Point>
+					<POINT_X>-83.61572</POINT_X>
+					<POINT_Y>42.51162</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Freeway_RSEs_DD>
+					<name>I-96 @ Kent Lake Rd (Huron River Pkwy)</name>
+					<description>Off-Board Navigation Option #1
+Traveler Information</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.65605953040856,42.51635684101253,0</coordinates>
+					</Point>
+					<POINT_X>-83.65518</POINT_X>
+					<POINT_Y>42.51648</POINT_Y>
+				</S_DTE_Freeway_RSEs_DD>
+				<S_DTE_Freeway_RSEs_DD>
+					<name>I-96 @ Milford Rd</name>
+					<description>Off-Board Navigation Option #1
+Traveler Information Option #1</description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.61668693569149,42.51929358071246,0</coordinates>
+					</Point>
+					<POINT_X>-83.6164</POINT_X>
+					<POINT_Y>42.51912</POINT_Y>
+				</S_DTE_Freeway_RSEs_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>12 Mile Rd @ Bunker Hill Dr</name>
+					<description><![CDATA[POINT_X = -83.3888<br>POINT_Y = 42.4982<br>
+Nisson STAP]]></description>
+					<styleUrl>#msn_370</styleUrl>
+					<Point>
+						<coordinates>-83.38878758989313,42.49851003870268,0</coordinates>
+					</Point>
+					<POINT_X>-83.38879</POINT_X>
+					<POINT_Y>42.49821</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+			</Folder>
+		</Folder>
+		<Folder>
+			<name>Wireline</name>
+			<Folder>
+				<name>T1 Sites</name>
+				<open>1</open>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>12 Mile Rd @ Farmington Rd</name>
+					<description>CICAS Complex Traffic Signal Violation Option #1
+CICAS Svc Chan is 182</description>
+					<styleUrl>#msn_shaded_dot4</styleUrl>
+					<Point>
+						<coordinates>-83.37818999999999,42.49866000000001,0</coordinates>
+					</Point>
+					<POINT_X>-83.37819</POINT_X>
+					<POINT_Y>42.49866</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>SPaT</name>
+					<open>1</open>
+					<description>CICAS Complex Traffic Signal Violation Option #1
+CICAS Svc Chan is 182</description>
+					<styleUrl>#msn_target2</styleUrl>
+					<Point>
+						<coordinates>-83.377971881799,42.49866411161827,0</coordinates>
+					</Point>
+					<POINT_X>-83.37819</POINT_X>
+					<POINT_Y>42.49866</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>PDM</name>
+					<open>1</open>
+					<description>CICAS Complex Traffic Signal Violation Option #1
+CICAS Svc Chan is 182</description>
+					<styleUrl>#msn_placemark_circle00</styleUrl>
+					<Point>
+						<coordinates>-83.37845367382053,42.49866219568882,0</coordinates>
+					</Point>
+					<POINT_X>-83.37819</POINT_X>
+					<POINT_Y>42.49866</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>BSMs</name>
+					<open>1</open>
+					<styleUrl>#msn_donut</styleUrl>
+					<Point>
+						<coordinates>-83.3782348636823,42.49884936299311,0</coordinates>
+					</Point>
+					<POINT_X>-83.37819</POINT_X>
+					<POINT_Y>42.49866</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>10 Mile Rd @ Novi Rd</name>
+					<description><![CDATA[POINT_X = -83.4747<br>POINT_Y = 42.4666<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.47454393444055,42.46672151604134,0</coordinates>
+					</Point>
+					<POINT_X>-83.4747</POINT_X>
+					<POINT_Y>42.46659</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Grand River Ave @ Meadowbrook Rd</name>
+					<description>Off-Board Navigation Option #1</description>
+					<styleUrl>#msn_shaded_dot</styleUrl>
+					<Point>
+						<coordinates>-83.45553,42.47637000000001,0</coordinates>
+					</Point>
+					<POINT_X>-83.45553</POINT_X>
+					<POINT_Y>42.47637</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Grand River Ave @ Haggerty Rd</name>
+					<description>Off-Board Navigation Option #1</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.43508999999999,42.47175,0</coordinates>
+					</Point>
+					<POINT_X>-83.43509</POINT_X>
+					<POINT_Y>42.47175</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>9 Mile Rd @ Haggerty Rd</name>
+					<description>Off-Board Navigation Option #2</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.43447935856108,42.45360480934404,0</coordinates>
+					</Point>
+					<POINT_X>-83.43423</POINT_X>
+					<POINT_Y>42.45348</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>9 Mile Rd @ Drake Rd</name>
+					<description><![CDATA[POINT_X = -83.3954<br>POINT_Y = 42.4546<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.39543000000001,42.45456000000004,0</coordinates>
+					</Point>
+					<POINT_X>-83.39543000000001</POINT_X>
+					<POINT_Y>42.45456</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>12 Mile Rd @ Haggerty Rd</name>
+					<description>CICAS Simple Traffic Signal Violation Option #2</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.43599191019416,42.49676937123635,0</coordinates>
+					</Point>
+					<POINT_X>-83.4362</POINT_X>
+					<POINT_Y>42.49683</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>10 Mile Rd @ Taft Rd</name>
+					<description><![CDATA[POINT_X = -83.4944<br>POINT_Y = 42.466<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.49442999999999,42.46602999999999,0</coordinates>
+					</Point>
+					<POINT_X>-83.49442999999999</POINT_X>
+					<POINT_Y>42.46603</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>8 Mile Rd @ Haggerty Rd</name>
+					<description>In-Vehicle Signage: Next Exit Services Option #2
+Off-Board Navigation Option #2</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.43646807465267,42.43867638044127,0</coordinates>
+					</Point>
+					<POINT_X>-83.43624</POINT_X>
+					<POINT_Y>42.43884</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_test_DD>
+					<name>10 Mile Rd @ Orchard Lake Rd</name>
+					<description>CICAS Simple Traffic Signal Violation Option #1
+CICAS Svc Chan is 182</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.35740392453735,42.47000613681122,0</coordinates>
+					</Point>
+					<_83_35371>-83.35717</_83_35371>
+					<_2_39042>42.47018</_2_39042>
+				</S_test_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>8 Mile Rd @ Orchard Hill Pl</name>
+					<description><![CDATA[POINT_X = -83.4388<br>POINT_Y = 42.4388<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.43896890279621,42.43863966170787,0</coordinates>
+					</Point>
+					<POINT_X>-83.4388</POINT_X>
+					<POINT_Y>42.43877</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>10 Mile Rd @ Research Dr</name>
+					<description>Off-Board Navigation Option #2</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.4273,42.46825000000002,0</coordinates>
+					</Point>
+					<POINT_X>-83.4273</POINT_X>
+					<POINT_Y>42.46825</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Grand River Rd @ Farmington Rd</name>
+					<description><![CDATA[POINT_X = -83.3765<br>POINT_Y = 42.4649<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.37646999999998,42.46493000000002,0</coordinates>
+					</Point>
+					<POINT_X>-83.37647</POINT_X>
+					<POINT_Y>42.46493</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Hills Tech Dr @ Haggerty Rd</name>
+					<description><![CDATA[POINT_X = -83.4359<br>POINT_Y = 42.4898<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.43591000000001,42.48984000000002,0</coordinates>
+					</Point>
+					<POINT_X>-83.43591000000001</POINT_X>
+					<POINT_Y>42.48984</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>10 Mile Rd @ Beck Rd</name>
+					<description><![CDATA[POINT_X = -83.5141<br>POINT_Y = 42.4655<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.51412999999999,42.46549,0</coordinates>
+					</Point>
+					<POINT_X>-83.51412999999999</POINT_X>
+					<POINT_Y>42.46549</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>10 Mile Rd @ Haggerty Rd</name>
+					<description>Off-Board Navigation Option #2</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.43491,42.46799000000002,0</coordinates>
+					</Point>
+					<POINT_X>-83.43491</POINT_X>
+					<POINT_Y>42.46799</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>11 Mile Rd @ Beck Rd</name>
+					<description><![CDATA[POINT_X = -83.5151<br>POINT_Y = 42.48<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.51512999999999,42.47995000000002,0</coordinates>
+					</Point>
+					<POINT_X>-83.51513</POINT_X>
+					<POINT_Y>42.47995</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>9 Mile Rd @ Novi Rd</name>
+					<description>In-Vehicle Signage: Dangerous Curve Warning Option #1</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.47423377319436,42.45227176638556,0</coordinates>
+					</Point>
+					<POINT_X>-83.47401000000001</POINT_X>
+					<POINT_Y>42.45215</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_DTE_Intersection_RSEs_Part_1_DD>
+					<name>Flint (Main St) @ Novi Rd</name>
+					<description><![CDATA[POINT_X = -83.4754<br>POINT_Y = 42.4786<br>]]></description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.47521954029631,42.47867627631743,0</coordinates>
+					</Point>
+					<POINT_X>-83.47535000000001</POINT_X>
+					<POINT_Y>42.47856</POINT_Y>
+				</S_DTE_Intersection_RSEs_Part_1_DD>
+				<S_test_DD>
+					<name>12 Mile Rd @ Middlebelt Rd</name>
+					<description>CICAS Simple Traffic Signal Violation Option #2</description>
+					<styleUrl>#msn_A31</styleUrl>
+					<Point>
+						<coordinates>-83.339321076384,42.49954079308436,0</coordinates>
+					</Point>
+					<_83_35371>-83.35867</_83_35371>
+					<_2_39042>42.49922</_2_39042>
+				</S_test_DD>
+			</Folder>
+		</Folder>
+	</Folder>
+</Document>
+</kml>
