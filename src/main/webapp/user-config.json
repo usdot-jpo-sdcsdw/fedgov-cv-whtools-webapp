@@ -10,7 +10,7 @@
                 },
                 {
                     "name": "subscription",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "name": "deposit",
