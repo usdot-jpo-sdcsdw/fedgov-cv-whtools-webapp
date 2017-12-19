@@ -16,7 +16,7 @@
 		<IconStyle>
 			<scale>1.4</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
 			</Icon>
 			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -28,7 +28,7 @@
 		<IconStyle>
 			<scale>1.2</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
 			</Icon>
 			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -40,7 +40,7 @@
 		<IconStyle>
 			<scale>1.2</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
 			</Icon>
 			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
 		</IconStyle>
@@ -52,7 +52,7 @@
 		<IconStyle>
 			<scale>1.4</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
 			</Icon>
 			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
 		</IconStyle>

@@ -18,7 +18,7 @@
 		<IconStyle>
 			<color>ffffff00</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -27,7 +27,7 @@
 			<color>ffffff00</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -35,7 +35,7 @@
 		<IconStyle>
 			<color>ff7fff55</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -47,7 +47,7 @@
 			<color>ff7fff55</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -78,7 +78,7 @@
 		<IconStyle>
 			<color>ffffff00</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -96,7 +96,7 @@
 		<IconStyle>
 			<color>ffffff00</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -105,7 +105,7 @@
 			<color>ff00ffff</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -116,7 +116,7 @@
 		<IconStyle>
 			<color>ff7fff55</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -127,7 +127,7 @@
 		<IconStyle>
 			<color>ffff0055</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -140,7 +140,7 @@
 			<color>ff7fff55</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -152,7 +152,7 @@
 			<color>ffff0055</color>
 			<scale>1.1</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -165,7 +165,7 @@
 			<color>ffffff00</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -193,7 +193,7 @@
 		<IconStyle>
 			<color>ff00ffff</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -204,7 +204,7 @@
 		<IconStyle>
 			<color>ffffff00</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -212,7 +212,7 @@
 		<IconStyle>
 			<color>ffff0055</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -224,7 +224,7 @@
 			<color>ff7fff55</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/paddle/3.png</href>
+				<href>https://maps.google.com/mapfiles/kml/paddle/3.png</href>
 			</Icon>
 			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
@@ -233,7 +233,7 @@
 		</LabelStyle>
 		<ListStyle>
 			<ItemIcon>
-				<href>http://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
+				<href>https://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
 			</ItemIcon>
 		</ListStyle>
 	</Style>
@@ -262,7 +262,7 @@
 			<color>ff00ffff</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -274,7 +274,7 @@
 			<color>ff7faaff</color>
 			<scale>1.65455</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -286,7 +286,7 @@
 			<color>ffffff00</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -305,7 +305,7 @@
 			<color>ffff0055</color>
 			<scale>1.30001</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -317,7 +317,7 @@
 		<IconStyle>
 			<color>ff7fff55</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -339,7 +339,7 @@
 			<color>ffff55aa</color>
 			<scale>1.2</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/target.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -351,7 +351,7 @@
 			<color>ff7fff55</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -363,7 +363,7 @@
 			<color>ffff0055</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -376,7 +376,7 @@
 			<color>ff00aa00</color>
 			<scale>1.4</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/donut.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -387,7 +387,7 @@
 		<IconStyle>
 			<color>ff7fff55</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/paddle/3.png</href>
+				<href>https://maps.google.com/mapfiles/kml/paddle/3.png</href>
 			</Icon>
 			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
@@ -396,7 +396,7 @@
 		</LabelStyle>
 		<ListStyle>
 			<ItemIcon>
-				<href>http://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
+				<href>https://maps.google.com/mapfiles/kml/paddle/3-lv.png</href>
 			</ItemIcon>
 		</ListStyle>
 	</Style>
@@ -415,7 +415,7 @@
 			<color>ff7fff55</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -437,7 +437,7 @@
 			<color>ffff55aa</color>
 			<scale>1.4</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/target.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -458,7 +458,7 @@
 		<IconStyle>
 			<color>ff00ff55</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -469,7 +469,7 @@
 		<IconStyle>
 			<color>ff00ffff</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -481,7 +481,7 @@
 			<color>ffff0055</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -503,7 +503,7 @@
 			<color>ff7faaff</color>
 			<scale>1.4</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -525,7 +525,7 @@
 			<color>ff00ff55</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -566,7 +566,7 @@
 		<IconStyle>
 			<color>ff7fff55</color>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -588,7 +588,7 @@
 			<color>ffffff00</color>
 			<scale>1.18182</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
 		</IconStyle>
 	</Style>
@@ -597,7 +597,7 @@
 			<color>ff00aa00</color>
 			<scale>1.2</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+				<href>https://maps.google.com/mapfiles/kml/shapes/donut.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>

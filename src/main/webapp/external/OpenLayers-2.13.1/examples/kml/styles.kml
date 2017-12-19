@@ -12,7 +12,7 @@ http://kml-samples.googlecode.com/svn/trunk/kml/Style/styles.kml
     <IconStyle>
       <color>ffff0000</color>
       <Icon>
-        <href>http://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
+        <href>https://maps.google.com/mapfiles/kml/shapes/sunny.png</href>
       </Icon>  
     </IconStyle>
   </Style>

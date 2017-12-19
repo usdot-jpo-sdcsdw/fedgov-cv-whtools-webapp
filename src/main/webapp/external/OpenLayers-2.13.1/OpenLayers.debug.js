@@ -36225,9 +36225,9 @@ OpenLayers.Layer.XYZ = OpenLayers.Class(OpenLayers.Layer.Grid, {
  * 
  * (code)
  *     new OpenLayers.Layer.OSM("OpenCycleMap", 
- *       ["http://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
- *        "http://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
- *        "http://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png"]); 
+ *       ["https://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+ *        "https://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+ *        "https://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png"]); 
  * (end)
  *
  * Inherits from:
@@ -36251,15 +36251,15 @@ OpenLayers.Layer.OSM = OpenLayers.Class(OpenLayers.Layer.XYZ, {
      * like this:
      * (code)
      *     new OpenLayers.Layer.OSM("OpenCycleMap", 
-     *       ["http://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
-     *        "http://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
-     *        "http://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png"]); 
+     *       ["https://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+     *        "https://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+     *        "https://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png"]); 
      * (end)
      */
     url: [
-        'http://a.tile.openstreetmap.org/${z}/${x}/${y}.png',
-        'http://b.tile.openstreetmap.org/${z}/${x}/${y}.png',
-        'http://c.tile.openstreetmap.org/${z}/${x}/${y}.png'
+        'https://a.tile.openstreetmap.org/${z}/${x}/${y}.png',
+        'https://b.tile.openstreetmap.org/${z}/${x}/${y}.png',
+        'https://c.tile.openstreetmap.org/${z}/${x}/${y}.png'
     ],
 
     /**
@@ -46709,7 +46709,7 @@ OpenLayers.Format.KML = OpenLayers.Class(OpenLayers.Format.XML, {
                             // Settings for Google specific icons that are 64x64
                             // We set the width and height to 64 and halve the
                             // scale to prevent icons from being too big
-                            var google = "http://maps.google.com/mapfiles/kml";
+                            var google = "https://maps.google.com/mapfiles/kml";
                             if (OpenLayers.String.startsWith(
                                                  href, google) && !w && !h) {
                                 w = 64;
@@ -46750,7 +46750,7 @@ OpenLayers.Format.KML = OpenLayers.Class(OpenLayers.Format.XML, {
                                 var posY = y ? (7 - y/32) : 7;
 
                                 var pos = posY * 8 + posX;
-                                href = "http://maps.google.com/mapfiles/kml/pal" 
+                                href = "https://maps.google.com/mapfiles/kml/pal" 
                                      + palette + "/icon" + pos + file_extension;
                             }
 
