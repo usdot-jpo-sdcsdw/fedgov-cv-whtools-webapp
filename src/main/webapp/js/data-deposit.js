@@ -192,6 +192,8 @@ function ParseText(text, sysName, encode) {
 
 $(document).ready( function (){
 	
+	var totalLines = 0;
+	var sessionLines = 0;
 	var hostname = window.location.host.split(":")[0];
 	var context = window.location.pathname.split("/")[1];
 	var wsURL = "wss://" + hostname + ":443/" + context + "/websocket";
@@ -204,10 +206,25 @@ $(document).ready( function (){
 
 	depWS.onopen = function() {
 		$('#depositIndicator').css({'color':'green'});
+		sessionLines = 0;
 	};
 
 	depWS.onmessage = function(evt) {
-
+		var depositedTag = "DEPOSITED:";
+		var errorTag = "ERROR:";
+		
+		if (evt.data.startsWith(depositedTag)) {
+			var depositedCount = parseInt(evt.data.slice(depositedTag.length));
+			totalLines += depositedCount;
+			sessionLines += depositedCount;
+			alert(depositedCount + " line(s) have been deposited (" + sessionLines + " this session, " + totalLines + " total)");
+		} else if (evt.data.startsWith(errorTag)) {
+			var errorMessage = evt.data.slice(errorTag.length);
+			
+			alert("An error occured: " + errorMessage);
+		} else {
+			alert("An unexpected message was received from the warehouse: " + evt.data);
+		}
 	};
 	
 	depWS.onclose = function() {
