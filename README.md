@@ -43,7 +43,8 @@ The following instructions describe the proceedure to fetch, build, and run the 
 * Maven: https://maven.apache.org/install.html
 * Git: https://git-scm.com/
 * Docker: https://docs.docker.com/engine/installation/
-* PerXerCodec: https://github.com/usdot-jpo-sdcsdw/per-xer-codec.git
+* SDW Websockets Interface: https://github.com/usdot-jpo-sdcsdw/fedgov-cv-webapp-websocket
+* PerXerCodec: https://github.com/usdot-jpo-sdcsdw/per-xer-codec
 
 ---
 ### Obtain the Source Code
