@@ -2,6 +2,12 @@
 
 The fedgov-cv-whtools-webapp project is a webapp providing tools to access the Connected Vehicle Warehouses.
 
+![Diagram](doc/images/fedgov-cv-whtools-webapp-diagram.png)
+
+![Diagram](doc/images/fedgov-cv-whtools-webapp-screenshot-query.png)
+
+![Diagram](doc/images/fedgov-cv-whtools-webapp-screenshot-deposit.png)
+
 <a name="toc"/>
 
 ## Table of Contents
