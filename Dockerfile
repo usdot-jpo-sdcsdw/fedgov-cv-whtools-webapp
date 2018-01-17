@@ -1,5 +1,8 @@
 FROM jetty:9.3.11-jre8-alpine
 
+# The relative path to the shared object for the codec shared object
+ARG CODEC_SO_PATH=target/libper-xer-codec.so
+
 # Mount the keystore here
 VOLUME $JETTY_HOME/etc/keystore_mount
 
@@ -21,7 +24,7 @@ ENV JETTY_KEYSTORE_RELATIVE_PATH=keystore
 WORKDIR $JETTY_HOME
 
 COPY target/whtools.war "$JETTY_HOME/webapps/whtools.war"
-COPY libper-xer-codec.so /usr/lib/libper-xer-codec.so
+COPY ${CODEC_SO_PATH} /usr/lib/libper-xer-codec.so
 COPY run-webapp.sh "$JETTY_HOME/run-webapp.sh"
 RUN chmod +x "$JETTY_HOME/run-webapp.sh"
 
