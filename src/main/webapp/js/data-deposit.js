@@ -212,7 +212,11 @@ $(document).ready( function (){
 	depWS.onmessage = function(evt) {
 		var depositedTag = "DEPOSITED:";
 		var errorTag = "ERROR:";
+		var connectedTag = "CONNECTED:";
 		
+		if (evt.data.startsWith(connectedTag)) {
+			// Do nothing, we expect this
+		}
 		if (evt.data.startsWith(depositedTag)) {
 			var depositedCount = parseInt(evt.data.slice(depositedTag.length));
 			totalLines += depositedCount;
