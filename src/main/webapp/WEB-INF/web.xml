@@ -11,18 +11,12 @@
 		<init-param>
 			<param-name>casServerLoginUrl</param-name>
 			
-			<param-value>https://cas.cvmvp.com/accounts/login</param-value>
-			 <!-- 
-			 <param-value>https://cas:9443/accounts/login</param-value>
-			  -->
+			<param-value>${cas.server.login.url}</param-value>
 		</init-param>
 		<init-param>
 			<param-name>serverName</param-name>
 			
-			<param-value>https://webapp.cvmvp.com</param-value>
-			<!-- 
-			<param-value>https://localhost:8443</param-value>
-			-->
+			<param-value>${whtools.server.prefix.url}</param-value>
 		</init-param>
 	</filter>
 
@@ -32,18 +26,11 @@
 		<init-param>
 			<param-name>casServerUrlPrefix</param-name>
 			
-            <param-value>https://cas.cvmvp.com/accounts</param-value>
-             <!--  
-			<param-value>https://cas:9443/accounts/</param-value>
-			-->
+            <param-value>${cas.server.prefix.url}</param-value>
 		</init-param>
 		<init-param>
 			<param-name>serverName</param-name>
-			 
-            <param-value>https://webapp.cvmvp.com</param-value>
-            <!--
-		    <param-value>https://localhost:8443</param-value>
-			-->
+            <param-value>${whtools.server.prefix.url}</param-value>
 		</init-param>
 	</filter>
 

@@ -90,15 +90,54 @@
 	<build>
 		<finalName>whtools</finalName>
 		<plugins>
+		  <plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-enforcer-plugin</artifactId>
+            <version>3.0.0-M1</version>
+            <executions>
+              <execution>
+                <id>enforce-property</id>
+                <goals>
+                  <goal>enforce</goal>
+                </goals>
+                <configuration>
+                  <rules>
+                    <requireProperty>
+                      <property>cas.server.login.url</property>
+                      <message>You must provide the login url for the CAS in the property cas.server.login.url, e.g. https://my.cas.com/login</message>
+                    </requireProperty>
+                    <requireProperty>
+                      <property>cas.server.prefix.url</property>
+                      <message>You must provide the url prefix for the CAS in the property cas.server.prefix.url, e.g. https://my.cas.com/</message>
+                    </requireProperty>
+                    <requireProperty>
+                      <property>whtools.server.prefix.url</property>
+                      <message>You must provide the url prefix for the Warehouse Tools Server in the property whtools.server.prefix.url, e.g. https://my.whtools.com/</message>
+                    </requireProperty>
+                  </rules>
+                  <fail>true</fail>
+                </configuration>
+              </execution>
+            </executions>
+		  </plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
 					<ignoreWebxml>false</ignoreWebxml>
+					<webResources>
+					  <resource>
+					    <filtering>true</filtering>
+					    <directory>src/main/webapp</directory>
+					    <includes>
+					      <include>**/web.xml</include>
+					    </includes>
+					  </resource>
+					</webResources>
+					<warSourceDirectory>src/main/webapp</warSourceDirectory>
 					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>
-			
 			 <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-dependency-plugin</artifactId>
