@@ -9,6 +9,22 @@ NEW_KEYSTORE_PATH=$KEYSTORE_MOUNT/$JETTY_KEYSTORE_RELATIVE_PATH
 #KEYSTORE_PATH_REPLACER='s|$DEFAULT_KEYSTORE_PATH|$NEW_KEYSTORE_PATH|g'
 OBF_PASSWORD=$(java -cp $UTIL_JAR $PASSWORD_CLASS $JETTY_KEYSTORE_PASSWORD 2>&1 | grep OBF)
 
+for ALIAS in $JETTY_KEYSTORE_TRUSTSTORE_EXPORT_ALIASES; do
+    TMPFILE=`mktemp tmp.cert.XXXXXX`
+    keytool -exportcert \
+        -alias $ALIAS \
+        -keystore $KEYSTORE_MOUNT/$JETTY_KEYSTORE_RELATIVE_PATH \
+        -file $TMPFILE \
+        -storepass $JETTY_KEYSTORE_PASSWORD \
+    && yes | keytool -import \
+        -alias $ALIAS \
+        -keystore $JAVA_KEYSTORE_PATH \
+        -file $TMPFILE \
+        -storepass $JAVA_KEYSTORE_PASSWORD \
+    && echo
+    rm -f $TMPFILE
+done
+
 ([ "$OBF_PASSWORD" ] || (echo "No password provided" && exit -1)) \
     && echo jetty.truststore.password=$OBF_PASSWORD >> $START_INI \
     && echo jetty.keystore.password=$OBF_PASSWORD >> $START_INI \

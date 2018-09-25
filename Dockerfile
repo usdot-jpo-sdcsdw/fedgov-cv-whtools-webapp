@@ -6,20 +6,20 @@ ARG CODEC_SO_PATH=target/libper-xer-codec.so
 # Mount the keystore here
 VOLUME $JETTY_HOME/etc/keystore_mount
 
+# The password to your mounted keystore
 ENV JETTY_KEYSTORE_PASSWORD=CHANGEME
 # The relative path from $JETTY_HOME/etc/keystore_mount your keystore is placed in
 ENV JETTY_KEYSTORE_RELATIVE_PATH=keystore
+# A list of aliases to export from your mounted keystore into the java trust
+# store
+# This is how you would, for example, trust a self-signed certificate that you
+# have loaded into your keystore
+ENV JETTY_KEYSTORE_TRUSTSTORE_EXPORT_ALIASES=""
 
-# This next section is needed to deal with the fact that the "Go Daddy Secure Certificate Authority" is not present on the openjdk 8 image 
-
-# The relative path from $JETYTY_HOME/etc/keystore_mount the certificate to install to cacerts is placed in
-#ENV MISSING_CERTIFICATE_RELATIVE_PATH=missing1.crt
 # This is actually the default location of the keystore, don't modify unless you are moving the keystore yourself
-#ENV JAVA_KEYSTORE_PATH=$JAVA_HOME/lib/security/cacerts
+ENV JAVA_KEYSTORE_PATH=$JAVA_HOME/lib/security/cacerts
 # This is actually the default password, don't modify unless you are modifying the keystore yourself
-#ENV JAVA_KEYSTORE_PASSWORD=changeit
-#COPY trust-cert.sh "$JETTY_HOME/trust-cert.sh"
-#RUN chmod +x "$JETTY_HOME/trust-cert.sh"
+ENV JAVA_KEYSTORE_PASSWORD=changeit
 
 WORKDIR $JETTY_HOME
 
