@@ -9,6 +9,9 @@
 	<properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <sdcsdw.docker.repository></sdcsdw.docker.repository>
+        <sdcsdw.docker.tag>testing</sdcsdw.docker.tag>
+        <dockerfile-maven-version>1.4.10</dockerfile-maven-version>
     </properties>
     
 	<profiles>
@@ -60,6 +63,43 @@
           <per-xer-codec-native-artifactId>per-xer-codec-native-linux</per-xer-codec-native-artifactId>
           <per-xer-codec-native-type>so</per-xer-codec-native-type>
         </properties>
+      </profile>
+      
+      <profile>
+        <id>docker build</id>
+        <activation>
+          <property>
+            <name>sdcsdw.skipDocker</name>
+            <value>!true</value>
+          </property>
+        </activation>
+        <build>
+          <plugins>
+            <plugin>
+            <groupId>com.spotify</groupId>
+              <artifactId>dockerfile-maven-plugin</artifactId>
+              <version>${dockerfile-maven-version}</version>
+              <executions>
+                <execution>
+                  <id>docker build</id>
+                  <goals>
+                    <goal>build</goal>
+                  </goals>
+                </execution>
+                <execution>
+                  <id>docker push</id>
+                  <goals>
+                    <goal>push</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <repository>${sdcsdw.docker.repository}dotcv/whtools-webapp</repository>
+                <tag>${sdcsdw.docker.tag}</tag>
+              </configuration>
+            </plugin>
+          </plugins>
+        </build>
       </profile>
     </profiles>
     
