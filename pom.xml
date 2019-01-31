@@ -87,6 +87,14 @@
             <groupId>com.spotify</groupId>
             <artifactId>dockerfile-maven-plugin</artifactId>
             <version>${dockerfile-maven-version}</version>
+            <dependencies>
+              <dependency>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-client</artifactId>
+                <classifier>shaded</classifier>
+                <version>8.14.5</version>
+              </dependency>
+            </dependencies>
             <executions>
               <execution>
                 <id>docker build</id>
