@@ -196,7 +196,7 @@ $(document).ready( function (){
 	var sessionLines = 0;
 	var hostname = window.location.host.split(":")[0];
 	var context = window.location.pathname.split("/")[1];
-	var wsURL = "wss://" + hostname + ":443/" + context + "/websocket";
+	var wsURL = "wss://" + window.location.host + "/" + context + "/websocket";
 
 	if (depWS != null) {
 		depWS.close();
