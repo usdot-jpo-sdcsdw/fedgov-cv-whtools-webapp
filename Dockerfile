@@ -1,4 +1,4 @@
-FROM jetty:9.3.11-jre8-alpine
+FROM jetty:9.4.12-jre8-alpine
 
 # The relative path to the shared object for the codec shared object
 ARG CODEC_SO_PATH=target/libper-xer-codec.so

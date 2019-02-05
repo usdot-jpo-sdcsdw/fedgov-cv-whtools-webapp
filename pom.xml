@@ -20,6 +20,7 @@
     <sdcsdw.docker.repository />
     <sdcsdw.docker.tag>testing</sdcsdw.docker.tag>
     <dockerfile-maven-version>1.4.10</dockerfile-maven-version>
+    <jetty.version>9.4.12.v20180830</jetty.version>
   </properties>
 
   <profiles>
@@ -138,32 +139,32 @@
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-util</artifactId>
-        <version>9.3.11.v20160721</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-io</artifactId>
-        <version>9.3.11.v20160721</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-servlet</artifactId>
-        <version>9.3.11.v20160721</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-http</artifactId>
-        <version>9.3.11.v20160721</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-server</artifactId>
-        <version>9.3.11.v20160721</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-servlets</artifactId>
-        <version>9.3.11.v20160721</version>
+        <version>${jetty.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
