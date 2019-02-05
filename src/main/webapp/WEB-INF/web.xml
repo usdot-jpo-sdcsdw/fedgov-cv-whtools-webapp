@@ -46,22 +46,38 @@
 
 	<filter-mapping>
 		<filter-name>CAS Authentication Filter</filter-name>
-		<url-pattern>/*</url-pattern>
+        <url-pattern></url-pattern>
+		<url-pattern>*.html</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>/websocket</url-pattern>
 	</filter-mapping>
 
 	<filter-mapping>
 		<filter-name>CAS Validation Filter</filter-name>
-		<url-pattern>/*</url-pattern>
+        <url-pattern></url-pattern>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>/websocket</url-pattern>
 	</filter-mapping>
 
 	<filter-mapping>
 		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
-		<url-pattern>/*</url-pattern>
+        <url-pattern></url-pattern>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>/websocket</url-pattern>
 	</filter-mapping>
 
 	<filter-mapping>
 		<filter-name>CAS Assertion Thread Local Filter</filter-name>
-		<url-pattern>/*</url-pattern>
+        <url-pattern></url-pattern>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>/websocket</url-pattern>
 	</filter-mapping>
 
 	<welcome-file-list>
