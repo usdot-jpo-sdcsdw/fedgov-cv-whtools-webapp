@@ -23,6 +23,10 @@
                     <Arg>whtools.server.prefix.url</Arg>
                     <Arg><Env name="WHTOOLS_SERVER_PREFIX_URL"/></Arg>
                 </Call>
+                <Call name="setProperty">
+                    <Arg>mongoConfigFile</Arg>
+                    <Arg><Env name="MONGO_CONFIG_FILE"/></Arg>
+                </Call>
             </New>
         </Arg>
     </Call>
