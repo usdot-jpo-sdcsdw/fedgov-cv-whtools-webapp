@@ -1,13 +1,10 @@
-FROM jetty:9.3.11-jre8-alpine
+FROM jetty:9.4.12-jre8-alpine
 
 # The relative path to the shared object for the codec shared object
 ARG CODEC_SO_PATH=target/libper-xer-codec.so
 
 # Password for the certificate keystore
 ENV JETTY_KEYSTORE_PASSWORD=CHANGEME
-
-# The relative path from $JETTY_HOME/etc/keystore_mount your keystore is placed in
-ENV JETTY_KEYSTORE_RELATIVE_PATH=keystore
 
 # The login url for the CAS
 ENV CAS_SERVER_LOGIN_URL=https://my.cas.com/login
@@ -21,17 +18,15 @@ ENV WHTOOLS_SERVER_PREFIX_URL=https://my.whtools.com/
 # by default, i.e. self-signed
 ENV TRUST_KEYSTORE=
 
-# Mount the keystore here
-VOLUME $JETTY_HOME/etc/keystore_mount
-
-WORKDIR $JETTY_HOME
-
 # Copy in war file, associated configuration xml, and codec binary
-COPY whtools.xml "$JETTY_HOME/webapps/whtools.xml"
+COPY whtools.xml "$JETTY_BASE/webapps/whtools.xml"
 COPY ${CODEC_SO_PATH} /usr/lib/libper-xer-codec.so
 COPY target/whtools.war /opt/whtools.war
 
+RUN mkdir $JETTY_BASE/etc/
+
 # Add in new entrypoint script
+USER root
 RUN mv /docker-entrypoint.sh /jetty-docker-entrypoint.sh
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
