@@ -40,12 +40,12 @@ $(function() {
 		
 		var hostname = window.location.host.split(":")[0];
 		var context = window.location.pathname.split("/")[1];
-		$("#wsURL").val("wss://" + hostname + ":443/" + context + "/websocket");
+		$("#wsURL").val("wss://" +window.location.host + "/" + context + "/websocket");
 		$("html,body").scrollTop(0);
 		
 		var hostname = window.location.host.split(":")[0];
 		var context = window.location.pathname.split("/")[1];
-		$("#wbsURL").val("wss://" + hostname + ":443/" + context + "/websocket");
+		$("#wbsURL").val("wss://" + window.location.host + "/" + context + "/websocket");
 		$("html,body").scrollTop(0);
 	}
 	

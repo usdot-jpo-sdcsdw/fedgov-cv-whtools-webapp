@@ -32,7 +32,7 @@ function OpenSocket(){
 
     var hostname = window.location.host.split(":")[0];
     var context = window.location.pathname.split("/")[1];
-    var ws_loc = "wss://" + hostname + ":443/" + context + "/websocket";
+    var ws_loc = "wss://" + window.location.host + "/" + context + "/websocket";
     ws = new WebSocket(ws_loc);
     
 	ws.onopen = function() {
